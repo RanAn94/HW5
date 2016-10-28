@@ -16,24 +16,32 @@
         <h1>Add A New Movie</h1>
         
         <form name="addForm" action="addMovie" method="get">
+            <table class="add">
+            <tr>
+                <td><label>Movie Name:</label></td>
+                <td><input type="text" name="mname" value=""/></td>
+            </tr>
+        
+            <tr>
+                <td><label>Director Name:</label></td>
+                <td><input type="text" name="dname" value=""/></td>
+            </tr>
+        
+            <tr>
+                <td><label>Publish Year:</label></td>
+                <td><input type="text" name="year" value=""/></td>
+            </tr>
+        
+            <tr>
+                <td><label>Movie Type:</label></td>
+                <td><input type="text" name="type" value=""/></td>
+            </tr>
             
-            <label>Movie Name:</label>
-            <input type="text" name="mname" value=""/>
-            <br>
-        
-            <label>Director Name:</label>
-            <input type="text" name="dname" value=""/>
-            <br>
-        
-            <label>Publish Year:</label>
-            <input type="text" name="year" value=""/>
-            <br>
-        
-            <label>Movie Type:</label>
-            <input type="text" name="type" value=""/>
-            <br>
-            
-            <input type="submit" name="submit" value="Submit"/>
+            <tr>
+            <td><input type="submit" name="submit" value="Submit"/></td>
+            <td><input type="reset" value="Clear" id="clear"></td>
+            </tr>
+            </table>
         </form>
         
     </body>

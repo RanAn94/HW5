@@ -95,7 +95,7 @@ public class ReadQuery
                 table += "</td>";
                 
                 table += "<td>";
-                table += "<a href=delete?movieID="+movie.getMovieID()+"> Delete</a>";
+                table += "<a href=update?movieID="+movie.getMovieID()+"> Update</a>"+"<a href=delete?movieID="+movie.getMovieID()+"> Delete</a>";
                 table += "</td>";
                 
                 table += "</tr>";
@@ -103,16 +103,7 @@ public class ReadQuery
         } catch (SQLException ex) {
             Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
-        
         table += "</table>";
             return table;   
     }
-    
-    
-    
-    
-    
 }

@@ -2,6 +2,13 @@ body{background:#D2B48C}
 th,td{border:1px solid white;}
 table{border:5px solid white;}
 
+.update td{border:none; height:25px;padding:10px;ffont-weight:bold;}
+.add td{border:none; height:25px;padding:10px;ffont-weight:bold;}
+input[readonly]{background-color:gray;}
+
+
+
+
 table
 {
     border-collapse: collapse;
