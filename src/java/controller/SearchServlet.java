@@ -5,7 +5,7 @@
  */
 package controller;
 
-import dbHelpers.ReadQuery;
+import dbHelpers.SearchQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -19,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Ran
  */
-@WebServlet(name = "Read", urlPatterns = {"/read"})
-public class Read extends HttpServlet {
+@WebServlet(name = "SearchServlet", urlPatterns = {"/search"})
+public class SearchServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,10 +39,10 @@ public class Read extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Read</title>");            
+            out.println("<title>Servlet SearchServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Read at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet SearchServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -74,19 +74,19 @@ public class Read extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+            //get the text to search
+            String movieName = request.getParameter("searchVal");
             //Create a ReadQuery helper object
-            ReadQuery rq = new ReadQuery();
-            //Get the HTML table from the ReadQuery object
-            rq.doRead();
-            String table = rq.getHTMLTable();
-            //Pass execution control to read.jsp along with the table.
+            SearchQuery sq = new SearchQuery();
+            //Get the HTML table from the ReadQueery object
+            sq.doSearch(movieName);
+            String table = sq.getHTMLTable();
+            //Pass execution control to read.jsp along with the table
             request.setAttribute("table",table);
             String url = "/read.jsp";
         
             RequestDispatcher dispatcher = request.getRequestDispatcher(url);
             dispatcher.forward(request, response);
-        
-        
     }
 
     /**

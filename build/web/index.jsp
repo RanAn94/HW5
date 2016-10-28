@@ -9,5 +9,7 @@
     <body>
         <h1>Recommendation for Movies</h1>
         <a href="read">View All Movies</a>
+        <br><br>
+        <a href="search.jsp">Search Movies</a>
     </body>
 </html>
