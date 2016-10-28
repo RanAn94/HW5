@@ -14,23 +14,36 @@
     
     
     <body>
-        <h1>Movies Recommended</h1>
-        <div style="overflow-x:auto;">
-        <table>
-        <tr>
-            <th> MovieID </th>
-            <th> Movie Name </th>
-            <th> Director Name </th>
-            <th> Publish Year </th>
-            <th> Movie Type </th>
-            <th>Delete</th>
-        </tr>
-        <%= table %>
-        </table>
-        </div>
-        <br><br>
-        <a href ="add">Add A New Movie</a>
-        <br><br>
-        <a href="search.jsp">Search Movies</a>
+        
+    <div class="wrap">
+            <!--Header-->
+            <%@ include file="includes/header.jsp"%>
+            <!--Menu-->
+            <%@ include file="includes/menu.jsp"%>
+       
+            <div class="main">
+                <h1>Movies Recommended</h1>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th> MovieID </th>
+                                <th> Movie Name </th>
+                                <th> Director Name </th>
+                                <th> Publish Year </th>
+                                <th> Movie Type </th>
+                                <th>Delete</th>
+                            </tr>
+                            <%= table %>
+                        </table>
+                    </div>
+                    <br><br>
+                    <a href ="add">Add A New Movie</a>
+                    <br><br>
+                    <a href="search.jsp">Search Movies</a>
+            </div>
+        
+        <!--Footer-->
+        <%@ include file="includes/footer.jsp"%>
+    </div>
     </body>
 </html>

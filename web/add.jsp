@@ -13,9 +13,15 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
-        <h1>Add A New Movie</h1>
+        <div class="wrap">
+            <!--Header-->
+            <%@ include file="includes/header.jsp"%>
+            <!--Menu-->
+            <%@ include file="includes/menu.jsp"%>
         
-        <form name="addForm" action="addMovie" method="get">
+            <div class="main">
+            <h1>Add A New Movie</h1>
+            <form name="addForm" action="addMovie" method="get">
             <table class="add">
             <tr>
                 <td><label>Movie Name:</label></td>
@@ -42,7 +48,10 @@
             <td><input type="reset" value="Clear" id="clear"></td>
             </tr>
             </table>
-        </form>
-        
+            </form>
+            </div>
+        <!--Footer-->
+        <%@ include file="includes/footer.jsp"%>
+        </div>
     </body>
 </html>

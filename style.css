@@ -1,0 +1,73 @@
+body
+{
+	background-color:#66CCFF;
+}
+.wrap
+{
+text-align:center;width:90%;margin:0 auto;border:1px solid black; margin top:25px;
+}
+
+.header
+{
+	background-color:tan;text-align:left;padding:25px;
+}
+.headerImg
+{
+	float:left;
+	width:200px;
+}
+.headerText
+{
+	float:left;
+	height:105px;
+	padding-top:50px;padding-left:25px;
+}
+
+.main
+{
+	background-color:pink;text-align:left;padding:25px;	
+}
+
+.footer
+{
+		background-color:green;text-align:left;padding:25px;
+}
+
+
+.menu { margin-left: 30px; }
+
+/*Fat Erik's Pipelist*/
+#navlist
+{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+#navlist li
+{
+display: inline;
+padding: 0;
+margin: 0;
+}
+
+#navlist li:before { content: "| "; }
+#navlist li:first-child:before { content: ""; }
+
+/*IE workaround*/
+/*All IE browsers*/
+* html #navlist li
+{
+border-left: 1px solid black;
+padding: 0 0.4em 0 0.4em;
+margin: 0 0.4em 0 -0.4em;
+}
+
+/*Win IE browsers - hide from Mac IE\*/
+* html #navlist { height: 1%; }
+
+* html #navlist li
+{
+display: block;
+float: left;
+}
